@@ -1,0 +1,404 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  background-color: #0b0c10;
+}
+
+nav {
+  background-color: #0b0c10;
+  overflow: hidden;
+  position: absolute;
+  top: 5%;
+  right: 0;
+  left: 0;
+  width: 319px;
+  display: table;
+  margin: 0 auto;
+  transform: translateY(-50%);
+}
+
+nav a {
+  position: relative;
+  width: 25%;
+  display: table-cell;
+  text-align: center;
+  color: #949494;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: 0.2s ease color;
+  font-size: 20px;
+}
+
+nav a:before,
+nav a:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.2s ease transform;
+}
+
+nav a:before {
+  top: 0;
+  left: 10px;
+  width: 6px;
+  height: 6px;
+}
+
+nav a:after {
+  top: 5px;
+  left: 18px;
+  width: 4px;
+  height: 4px;
+}
+
+nav a:nth-child(1):before {
+  background-color: yellow;
+}
+
+nav a:nth-child(1):after {
+  background-color: greenyellow;
+}
+
+nav a:nth-child(2):before {
+  background-color: greenyellow;
+}
+
+nav a:nth-child(2):after {
+  background-color: green;
+}
+
+nav a:nth-child(3):before {
+  background-color: green;
+}
+
+nav a:nth-child(3):after {
+  background-color: cyan;
+}
+
+nav a:nth-child(4):before {
+  background-color: cyan;
+}
+
+nav a:nth-child(4):after {
+  background-color: rgb(0, 68, 255);
+}
+
+nav a:nth-child(5):before {
+  background-color: rgb(0, 68, 255);
+}
+
+nav a:nth-child(5):after {
+  background-color: rgb(81, 0, 128);
+}
+
+nav a:nth-child(6):before {
+  background-color: rgb(128, 0, 96);
+}
+
+nav a:nth-child(6):after {
+  background-color: rgb(255, 0, 0);
+}
+
+
+#indicator {
+  position: absolute;
+  left: 1%;
+  bottom: 0;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: 0.2s ease left;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a:hover:before,
+nav a:hover:after {
+  transform: scale(1);
+}
+
+nav a:nth-child(1):hover ~ #indicator {
+  background: linear-gradient(130deg, yellow, greenyellow);
+}
+
+nav a:nth-child(2):hover ~ #indicator {
+  left: 14%;
+  background: linear-gradient(130deg, greenyellow, green);
+}
+
+nav a:nth-child(3):hover ~ #indicator {
+  left: 28.4%;
+  background: linear-gradient(130deg, green, cyan);
+}
+
+nav a:nth-child(4):hover ~ #indicator {
+  left: 50%;
+  background: linear-gradient(130deg, cyan, rgb(0, 68, 255));
+}
+
+nav a:nth-child(5):hover ~ #indicator {
+  left: 64.5%;
+  background: linear-gradient(130deg, rgb(0, 68, 255), rgb(81, 0, 128));
+}
+
+nav a:nth-child(6):hover ~ #indicator {
+  left: 83.5%;
+  background: linear-gradient(130deg, rgb(128, 0, 96), rgb(255, 0, 0));
+}
+
+.hero {
+  position: absolute;
+  top: 30%;
+  margin-left: 35%;
+}
+
+.container {
+  height: 200px;
+  width: 500px;
+  margin-top: -120px;
+  margin-left: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container h1 {
+  font-family: Allura;
+  font-weight: 100;
+  color: #ff9142;
+  font-size: 128px;
+}
+
+.name {
+  color: white;
+  margin-top: 500px;
+  margin-left: 14.5%;
+}
+
+.name h1 {
+  font-size: 64px;
+  font-family: Syne;
+}
+
+.name p {
+  font-size: 30px;
+  margin-top: -25px;
+  color: #c5c6c7;
+  font-family: Inter;
+}
+
+.avatar {
+  margin-left: 70%;
+  margin-top: -250px;
+  border-radius: 30px;
+}
+
+.avatar {
+  width: 332px;
+  height: 371px;
+  background-color: white;
+}
+
+.about-me{
+  word-spacing: 5px;
+  line-height: 50px;
+  margin-top: 12%;
+  width: 73%;
+  color: #c5c6c7;
+  margin-left: 14.5%;
+  font-size: 20px;
+  font-family: inter;
+}
+
+.about-me h1{
+  font-weight: 100;
+  color: white;
+  font-family: syne;
+  font-size: 100px;
+}
+
+.second-p{
+  margin-top: 5%;
+}
+
+.education{
+  margin-top: 12%;
+  width: 73%;
+  margin-left: 14.5%;
+}
+
+.education h1{
+  font-weight: 100;
+  color: white;
+  font-family: syne;
+  font-size: 100px;
+}
+
+.education p{
+  color: #c5c6c7;
+  font-size: 25px;
+  font-family: inter;
+}
+
+.skills{
+  margin-top: 12%;
+  width: 73%;
+  margin-left: 14.5%;
+}
+
+.skills h1{
+  font-weight: 100;
+  color: white;
+  font-family: syne;
+  font-size: 100px;
+}
+
+.skills svg{
+  margin-right: 5%;
+}
+
+.projects{
+  margin-top: 12%;
+  width: 73%;
+  margin-left: 14.5%;
+}
+
+.projects h1{
+  font-weight: 100;
+  color: white;
+  font-family: syne;
+  font-size: 100px;
+}
+
+.Dice img{
+  width: 600px;
+  height: 400px;
+  margin-left: 14.5%;
+  border-radius: 15px;
+}
+
+
+.Dice h1{
+  color: white;
+  font-size: 25px;
+  font-family: inter;
+  margin-left: 50.5%;
+  margin-top: -260px;
+}
+
+.Dice p{
+  color: #c5c6c7;
+  font-size: 20px;
+  margin-left: 50.5%;
+  width: 650px;
+}
+
+.Drum img{
+  border-radius: 15px;
+  width: 600px;
+  height: 400px;
+  margin-left: 14.5%;
+  margin-top: 200px;
+}
+
+.Drum h1{
+  color: white;
+  font-size: 25px;
+  font-family: inter;
+  margin-left: 50.5%;
+  margin-top: -260px;
+}
+
+.Drum p{
+  color: #c5c6c7;
+  font-size: 20px;
+  margin-left: 50.5%;
+  width: 650px;
+}
+
+.Simongame img{
+  border-radius: 15px;
+  width: 600px;
+  height: 400px;
+  margin-left: 14.5%;
+  margin-top: 200px;
+}
+
+.Simongame h1{
+  color: white;
+  font-size: 25px;
+  font-family: inter;
+  margin-left: 50.5%;
+  margin-top: -260px;
+}
+
+.Simongame p{
+  color: #c5c6c7;
+  font-size: 20px;
+  margin-left: 50.5%;
+  width: 650px;
+}
+
+.contact h1{
+  color: #ff9142;
+  font-family: syne;
+  margin-top: 20%;
+  font-size: 40px;
+  position: relative;
+  text-align: center;
+}
+
+.contact p{
+  font-family: syne;
+  margin-top: -1%;
+  color: #c5c6c7;
+  position: relative;
+  text-align: center;
+  font-size: 60px;
+}
+
+.typing {
+  overflow: hidden;
+  border-right: 0.15em solid #c5c6c7;
+  white-space: nowrap;
+  animation: typing 1.5s forwards;
+  width: 0;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 280px;
+  }
+}
+
+.footer {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  margin-left: 10px;
+  font-family: inter;
+  font-size: 20px;
+}
+
+.footer .line{
+  width: 1px;
+  height: 20px;
+  background-color: #ffffff;
+  border: 1px solid #c5c6c7;
+  margin-left: 10px;
+}
